@@ -71,8 +71,10 @@ final class Game {
                     break;
                 } else {
                     // Output
-                    System.out.println("Guess was incorrect");
-                    if (guess > randomNumber) {
+                    if (guess <1 || guess > 6) {
+                        System.out.println("Not an integer between 1-6.");
+                        break;
+                    } else if (guess > randomNumber) {
                         System.out.println("That number is too high, "
                                         + "guess lower.");
                     } else if (guess < randomNumber) {
